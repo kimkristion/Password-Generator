@@ -1,0 +1,201 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f9fbfd;
+}
+
+.wrapper {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  padding-top: 0px;
+  color: hsl(206, 17%, 28%);
+}
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  border-width: 1px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  color: hsl(206, 17%, 28%);
+  font-size: 18px;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 30px 40px;
+}
+
+
+.card-header::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #e7e9eb;
+  height: 2px;
+}
+
+.card-body {
+  min-height: 100px;
+}
+
+.card-footer {
+  text-align: center;
+}
+
+.card-footer::before {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #e7e9eb;
+  height: 2px;
+}
+
+.card-footer::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* duplicate button which generates the prompts and functional generate button */
+.preBtn {
+  border: none;
+  background-image: linear-gradient(to right, #d2d2d2, #aaaaaa);
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* background-color of button changed to background-image to display a more artistic finish */
+.btn {
+  border: none;
+  background-image: linear-gradient(to right, #d2d2d2, #aaaaaa);
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+button[disabled] {
+  cursor: default;
+  background: #c0c7cf;
+}
+
+.float-right {
+  float: right;
+}
+
+/* border color sligtly modified */
+#password {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 85px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px dashed #aaaaaa;
+  border-radius: 6px;
+  resize: none;
+  overflow: hidden;
+}
+
+
+/* placeholder text given an italic style for viewer experience */
+.card-body ::placeholder {
+  font-style: italic;
+}
+
+/* spacing out the inputs by 16px*/
+.inputs label {
+  margin-bottom: 1rem;
+}
+
+/* all inputs expect checkboxes are modified to only display value with no outline */
+input:not([type="checkbox"]) {
+  outline: none;
+  appearance: none;
+  border: none;
+}
+
+/* labels will be displayed as flex so inputs are to the right of their spans */
+label {
+  display: flex;
+  margin-left: 1rem;
+  white-space: nowrap;
+}
+
+/* cursor will change to a pointer when hovered over */
+label input {
+  cursor: pointer;
+}
+
+/* input values are given a flex values */
+label span {
+  display: block;
+  flex: .4 .4 0%;
+}
+
+/* input value of the password length is displayed in the center of its container */
+label input[type="number"] {
+  text-align: center;
+}
+
+
+
+@media (max-width: 690px) {
+  .btn {
+    font-size: 1rem;
+    margin: 16px 0px 0px 0px;
+    padding: 10px 15px;
+  }
+
+  #password {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .btn {
+    font-size: 0.8rem;
+  }
+}

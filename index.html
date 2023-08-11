@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+
+        <!-- creating an input section which will be displayed when event listener is activated -->
+        <div class="inputs" hidden>
+          <label>
+            <span>Password Length: </span>
+            <input type="number" id="lengthPassword" value="8" min="8" max="128">
+          </label>
+  
+          <label>
+            <span>Include Lowercase Letters: </span>
+            <input type="checkbox" id="lowercase" checked />
+         </label>
+
+          <label>
+            <span>Include Uppercase Letters: </span>
+            <input type="checkbox" id="uppercase" checked />
+          </label>
+
+          <label>
+            <span>Include Numerals: </span>
+            <input type="checkbox" id="numbers" checked />
+          </label>
+
+          <label>
+            <span>Include Special Character: </span>
+            <input type="checkbox" id="special" checked />
+          </label>
+        </div>
+
+        <div class="card-footer">
+          <!-- generatePrompts is a duplicate button which will generate the user input section and functional generatePassword button -->
+          <div id="generatePrompts">
+            <button id="generatePrompts" class="preBtn">Generate Password</button>
+          </div>
+
+          </div>
+            <div id="generatePassword" hidden>
+            <button id="generatePassword" class="btn" >Generate Password</button>
+            </div>
+        </div>
+
+      </div>
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
