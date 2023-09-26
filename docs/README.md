@@ -15,7 +15,7 @@
 ## Usage 
 
 https://github.com/kimkristion/Password-Generator
-![Website Working](<Screenshot (14).png>)
+(<![Working Website](<../assets/Screenshot (14).png>)>)
 
 ## Credits 
 
