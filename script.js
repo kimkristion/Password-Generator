@@ -21,8 +21,15 @@ const charSpecial = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
 
 function GeneratePassword() {
 // let values are creating an empty string value to be replaced with for loop generation to create the password
+  const minLength = 8;
+  const maxLength = 128;
+
+
   let password = "";
   let passLength = passwordLength.value;
+  if (passLength < minLength || passLength > maxLength ) {
+    return alert('Invalid Password Length')
+  }
   let passwordChar = "";
 // passwordChar generates an empty string to be replaced if conditions are met, ? used to see if checked or not, : (after) displaying what to input if false
   passwordChar += charSetLower.checked ? charLower : ""
@@ -53,3 +60,5 @@ function DisplayPrompts() {
 generatePromptsBtn.addEventListener("click", DisplayPrompts )
 // when the function generate button is clicked it will run the function that creates the password
 generateBtn.addEventListener("click", GeneratePassword)
+
+

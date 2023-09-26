@@ -15,10 +15,7 @@
 ## Usage 
 
 https://github.com/kimkristion/Password-Generator
-![Deployed Website](<Screenshot (13).png>)
 ![Website Working](<Screenshot (14).png>)
-
-
 
 ## Credits 
 
@@ -27,5 +24,5 @@ https://github.com/coding-boot-camp/friendly-parakeet/tree/main/Develop
 
 ## License 
 
-- none
+- Please refer to the LICENSE in the repository
 
